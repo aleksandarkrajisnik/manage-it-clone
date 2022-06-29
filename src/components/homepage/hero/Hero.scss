@@ -1,0 +1,112 @@
+.hero{
+    
+    min-height: 75vh;
+    background: url('../../../assets/chess.jpg');
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12% 0;
+
+    @media screen and (max-width:1050px) {
+        padding: 2% 0;
+    }
+
+    &__title{
+        color:white;
+        display:flex;
+        max-width: 1300px;
+        
+        @media screen and (max-width:1050px) {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        img{
+            transform: scale(0.9);
+            margin-right: 20px;
+            
+
+            @media screen and (max-width:1150px) {
+                transform: scale(0.8);
+            }
+
+            @media screen and (max-width:1050px) {
+                margin: 0 auto;
+
+            }
+        }
+
+        h1{
+            font-size: 3.8em;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1em;
+
+            @media screen and (max-width:1050px) {
+                font-size: 3em;
+                margin-top: 40px;
+            }
+
+            @media screen and (max-width:500px) {
+                max-width: 80%;
+                margin:20px auto;
+               font-size: 2em;
+            }
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            line-height: 35px;
+            font-weight: 400;
+            @media screen and (max-width:1050px) {
+                display: none;
+            }
+        }
+    }
+}
+
+h3{
+    margin-top: 8%;
+    font-size:1.25em;
+    color: white;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+
+    
+}
+
+.slider{
+    margin-top: 50px;
+    width: 75%;
+    position: relative;
+ 
+    @media screen and (max-width:1400px) {
+       width: 100%;
+       
+    }
+
+    .imgHolder{
+       
+        display: flex;
+        justify-content: center;
+    }
+
+    img{
+        pointer-events:none;
+        margin:0 auto;
+        @media screen and (max-width:1100) {
+         
+           padding:0 25%;
+        }
+        @media screen and (max-width:500px) {
+            width: 80%;
+        }
+    }
+    
+}
+

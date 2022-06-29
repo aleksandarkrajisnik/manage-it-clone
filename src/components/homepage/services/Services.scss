@@ -1,0 +1,245 @@
+@use '../../../colors';
+
+.services-holder{
+    padding:4% 0;
+    padding-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;    
+    background: url('../../../assets/offers.jpg');
+    background-attachment: fixed;
+    background-position: center;
+
+    span{
+        display: inline;
+        color:orange;
+        font-weight: bold;
+    }
+
+    .line1{
+        height: 3px;
+        width: 5%;
+        margin:20px 0;
+        background-color: orange;
+    }
+
+    h4{
+        margin:0 5px;
+        color:rgb(255, 255, 255);
+        font-weight: 550;
+        font-size: 1em;
+        letter-spacing: 4px;
+        display: inline;
+    }
+
+    h1{
+        font-size: 3.5em;
+        font-weight: bold;
+        margin-top:20px;
+        color:white;
+    }
+
+    p{
+        color:white;
+        font-size: 0.9em;
+        max-width: 90%;
+    }
+
+    .cards{
+        width: 75%;
+        margin-top: 20px;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        padding:100px 0;
+       
+
+        @media screen and (max-width:1330px) {
+            
+            flex-direction: column;
+            padding-top: 0px;
+        }
+
+        @media screen and (max-width:660px){
+            width: 90%;
+        }
+       
+        @media screen and (max-width:500px) {
+            padding-bottom: 50px;
+            width: 100%;
+            align-items: center;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+        }
+
+        .card{
+            transform-style: preserve-3d;
+            transform:perspective(1000px);
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.166);
+            border-top: 1px solid rgba(255, 255, 255, 0.327);
+            border-left: 1px solid rgba(255, 255, 255, 0.327);
+            backdrop-filter: blur(5px);
+            box-shadow: 5px 0px 54px rgba(124, 124, 124, 0.412);
+            width: 23%;
+            border-radius: 15px;
+            padding:20px;
+            padding-bottom: 0;
+            transition: 0.2s linear;
+            &:nth-child(2){
+                &:hover{
+                    box-shadow: 5px 0px 54px colors.$lightblue;  
+                }
+                &:hover .line2{
+                    background-color: colors.$lightblue;
+                    transition: 0.2s linear;
+                }
+                &:hover a{
+                    border:2px solid colors.$lightblue;
+                    
+                }
+                a{
+                    &:hover{
+                        background-color: colors.$lightblue;
+                        color:white;
+                    }
+                }
+            }
+
+            &:nth-child(4){
+                &:hover{
+                    box-shadow: 5px 0px 54px rgb(255, 193, 78);  
+                }
+                &:hover .line2{
+                    background-color: rgb(255, 193, 78);
+                    transition: 0.2s linear;
+                }
+                &:hover a{
+                    border:2px solid rgb(255, 193, 78);
+                    
+                }
+                a{
+                    &:hover{
+                        background-color: rgb(255, 193, 78);
+                        color:white;
+                    }
+                }
+            }
+
+            &:nth-child(3){
+                &:hover{
+                    box-shadow: 5px 0px 54px rgba(255, 255, 255, 0.812);
+                }
+                &:hover .line2{
+                    background-color: rgba(255, 255, 255, 0.812);
+                    transition: 0.2s linear;
+                }
+                &:hover a{
+                    border:2px solid rgba(255, 255, 255, 0.812);
+                    
+                }
+                a{
+                    &:hover{
+                        background-color: rgb(255, 255, 255);
+                        
+                    }
+                }
+            }
+
+            &:nth-child(1){
+                &:hover{
+                    box-shadow: 5px 0px 54px rgba(255, 88, 88, 0.625);  
+                }
+                &:hover .line2{
+                    background-color: rgba(255, 88, 88, 0.625);
+                    transition: 0.2s linear;
+                }
+                &:hover a{
+                    border:2px solid rgba(255, 88, 88, 0.625);
+                    
+                }
+                a{
+                    &:hover{
+                        background-color: rgba(255, 88, 88, 0.625);  
+                        color:white;
+                      
+                        
+                    }
+                }
+            }
+
+            @media screen and (max-width:1330px) {
+                width: 100%;
+                margin-top: 80px;
+            }
+
+            @media screen and (max-width:500px) {
+                width: 90%;
+                margin-top: 120px;
+            }
+
+            img{
+                transform:translateZ(25px);
+                border-radius: 15px;
+                margin-top: -37%; 
+                @media screen and (max-width:1330px) {
+                    margin-top: -10%;
+                }
+                @media screen and (max-width:500px) {
+                    margin-top: -30%;
+                }
+            }
+
+            .line2{
+                height: 2.5px;
+                width: 25%;
+                background-color: rgb(224, 147, 3);
+                margin: 25px auto;
+            }
+
+            h3{
+                transform:translateZ(25px);  
+            }
+
+            p{
+                
+                transform:translateZ(25px);
+                color:white;
+                text-align: center;
+                font-size: 1em;
+                line-height: 1.5;
+                font-family: 'Nunito', sans-serif;
+                margin:0 auto;
+                margin-bottom: 120px;
+            }
+
+            .btnDiv{
+              
+                bottom:0;
+                position: absolute;
+                width: 100%;
+                left:0px;
+                padding-bottom: 30px;
+            }
+
+            a{
+              color:white;
+              border:2px solid rgb(255, 196, 0);
+              
+              padding: 10px 20px;
+              border-radius: 10px;
+              font-size: 0.9em;
+              font-family: 'Nunito', sans-serif;
+              font-weight: 600;
+              transition: 0.2s ease-in-out;
+              &:hover{
+                background-color: rgb(255, 196, 0);
+                transition: 0.2s ease-in-out;
+                color:black;
+              }
+            }
+        }
+    }
+}
+

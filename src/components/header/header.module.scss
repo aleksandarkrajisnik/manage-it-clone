@@ -1,0 +1,216 @@
+@use '../../colors';
+@import 'animate.css';
+
+
+
+a{
+    color:black;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 2px 18px rgb(75, 75, 75);
+}
+
+.header{
+    position: sticky;
+    background-color: white;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    max-width: 1700px;
+    padding:0 5%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+ 
+
+  &__logo{
+    padding-right: 10px;
+    height: 55%;
+    animation:fadeIn;
+    animation-duration: 2s;
+
+    img{
+        height: 100%;
+    }
+  }
+
+  &__links{
+    display: flex;
+    margin-left: -130px;
+
+    @media screen and (max-width:1130px) {
+        display: none;
+    }
+   a{
+    color: colors.$navlink;
+    margin:0 20px;
+    align-items: center;
+    display: flex;
+    font-weight: 700;
+    font-size: 0.75em;
+    letter-spacing: 2.2px;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+            svg{
+             margin-left: 5px;
+             font-size: 0.8em;
+            }
+        }
+    }
+&__dropdownHolder{
+  
+   &:hover .header__dropdownMenu{
+    display: block;
+    opacity:1;
+   transition:0.3s ease-in-out;
+   }
+}
+    &__dropdownMenu{
+        opacity: 0;
+        display: none;
+        position: absolute;
+        background-color: white ;
+        
+        padding:0;
+        transition: 0.2s ease-in;
+        a{  
+            margin-left:0px;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            
+
+            &:hover{
+                background-color: colors.$lightblue;
+                color:white;
+                transition: 0.1s ease-in;
+            }
+        }
+    }
+
+    &__social{
+
+        display: flex;  
+        align-items: center;
+
+        .instagram, .facebook{
+          
+            margin:0 3px;
+            padding: 4px;
+            border-radius: 3px;
+            background-color: colors.$social;
+
+            @media screen and (max-width:500px) {
+                display: none;
+            }
+
+            &:hover svg{
+                color:colors.$midblue;
+            }
+        }
+
+
+        .bookingButton{
+            padding:11px 23px;
+            color:white;
+            font-weight: bold;
+            font-size: 0.90em;
+            border-radius: 50px;
+            letter-spacing: 2.9px;
+            font-family: 'Work Sans', sans-serif;
+            background-color: colors.$lightblue;
+            transition: 0.15s linear;
+
+            @media screen and (max-width:500px) {
+               padding: 10px;
+               font-size: 0.8em;
+            }
+
+            &:hover{
+                background-color: colors.$social;
+                transition: 0.2s linear;
+            }
+        }
+
+        a{
+            margin:0 5px;
+        }
+
+        svg{
+            color:white;
+            font-size: 1em;
+        }
+        
+    }
+}
+
+.dropdownHolder2{
+    display: none;
+    @media screen and (max-width:1130px) {
+        display: block;
+    }
+
+    svg{
+        font-size: 2em;
+        color: black;
+        cursor:pointer;
+    }
+}
+
+.dropdown2{
+    position: absolute;
+    width: 100%;
+    left:0;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+    a{
+        text-align: center;
+        background-color: white;
+        padding: 3px 0;
+
+        &:hover{
+            background-color: colors.$lightblue;
+            color:white;
+        }
+
+    }
+    
+    .dropdownChild{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+        
+        a{
+            background-color: colors.$lightblue;
+            color:white;
+
+            &:hover{
+                color:orange;
+            }
+        }
+    }
+}
+
+.childToggler{
+    cursor: pointer;
+    svg{
+        margin-left: 5px;
+        font-size: 0.8em;
+    }
+
+    &:hover svg{
+        color:white;
+    }
+}

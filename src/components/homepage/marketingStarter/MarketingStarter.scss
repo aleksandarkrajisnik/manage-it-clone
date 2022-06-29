@@ -1,0 +1,176 @@
+@use '../../../colors';
+
+.marketing-starter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:colors.$lightgray;
+
+    &__main-content{
+        box-shadow: 0px 2px 30px rgb(78, 78, 78);
+        margin:6% 0;
+        width: 75%;
+        display: flex;
+        border-radius: 25px;
+        background-color: white;
+
+        @media screen and (max-width:1024px) {
+            flex-direction: column-reverse;
+            width: 98%;
+        }
+       
+        .text{
+            z-index: 10000000;
+           background-color: white;
+           border-radius: 25px;
+            width: 40%;
+            padding: 17% 2%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media screen and (max-width:1024px) {
+                justify-content:flex-start;
+                z-index: 1;
+                width: 100%;
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0);
+                
+            }
+
+            h1{
+                font-weight: bold;
+                font-size: 4em;
+                line-height: 60px;
+                font-family: 'Poppins', sans-serif;
+                color:colors.$navlink;
+                @media screen and (max-width:1200px) {
+                    font-size: 3.5em;
+                }
+                @media screen and (max-width:1024px) {
+                    color:white;
+                }
+
+                @media screen and (max-width:500px) {
+                    font-size: 3em;
+                    
+                }
+            }
+
+            .line{
+                height: 1.5px;
+                width: 30%;
+                background-color: black;
+                margin:15% 0 10% 0;
+
+                @media screen and (max-width:1024px) {
+                    height: 3px;
+                    width: 50%;
+                    margin:5% 0;
+                   
+                    background-color: rgb(219, 173, 7);
+                    border-radius: 100%;
+                    
+                }
+            }
+
+            p{
+                width: 70%;
+                font-weight: 500;
+                font-family: 'Lato', sans-serif;
+                font-size: 1.15em;
+                line-height: 1.4;
+                color:colors.$navlink;
+
+                @media screen and (max-width:1024px) {
+                    color:white;
+                }
+            }
+
+            span{
+                margin:15% 0;
+                font-family: 'Lato', sans-serif;
+                color:rgb(219, 173, 7);
+                font-style: italic;
+                font-size: 2em;
+
+                @media screen and (max-width:1024px) {
+                    margin:5% 0;
+                }
+            }
+
+            a{
+                border-radius: 50px;
+                padding: 17px 32px;
+                font-weight: 500;
+                font-size: 0.9em;
+                background-color: colors.$lightblue;
+                color:white;
+                transition: 0.2s ease-in-out;
+
+                @media screen and (max-width:500px) {
+                    margin-bottom: 15%;
+                }
+
+                &:hover{
+                    background-color: black;
+                    
+                    transform: scale(1.1);
+                    transition: 0.2s ease-in-out;
+                }
+                
+                svg{
+                    color: white;
+                }
+            }
+        }
+
+        .image{
+           width: 60%;
+           position:relative;
+
+           @media screen and (max-width:1024px) {
+            width: 100%;
+            height: 80vh;
+            background: url('../../../assets/coach.jpg');
+            background-size: cover;
+            border-radius: 25px;
+            }
+            
+
+           img{
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+
+            @media screen and (max-width:1024px) {
+                opacity: 0;
+                border-radius: 25px;
+            }
+           }
+          .overlay{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            background-color: rgba(255, 255, 255, 0.295);
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+
+            &:hover{
+                opacity: 1;
+                transition: 0.3s ease-in-out;
+            }
+
+            @media screen and (max-width:1024px) {
+                opacity: 1;
+                background-color: rgba(0, 0, 0, 0.626);
+                border-radius: 25px;
+            }
+          }
+        }
+    }
+}
